@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.27.0](https://github.com/dryvist/splunk-homelab-alerts/compare/v0.26.0...v0.27.0) (2026-11-21)
+
+
+### Features
+
+* **alerts:** alert when a GitHub runner's OpenBao login fails ([#79](https://github.com/dryvist/splunk-homelab-alerts/issues/79)) ([db348c4](https://github.com/dryvist/splunk-homelab-alerts/commit/db348c4b24874588f9e0812daf5e407f1b0664c2))
+
 ## [0.26.0](https://github.com/dryvist/splunk-homelab-alerts/compare/v0.25.0...v0.26.0) (2026-11-09)
 
 
