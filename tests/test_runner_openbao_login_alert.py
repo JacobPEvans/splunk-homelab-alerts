@@ -25,6 +25,9 @@ class RunnerOpenBaoLoginAlertTest(unittest.TestCase):
         self.assertIn('search type=response role="github-runner"', self.body)
         self.assertIn("join type=inner src", self.body)
 
+    def test_links_the_runner_dashboard(self):
+        self.assertIn("/d/github-ci-runners?viewPanel=1", self.body)
+
     def test_is_enabled_and_runs_every_five_minutes(self):
         self.assertIn("disabled = 0", self.body)
         self.assertIn("cron_schedule = */5 * * * *", self.body)
