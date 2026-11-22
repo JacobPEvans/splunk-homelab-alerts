@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.29.0](https://github.com/dryvist/splunk-homelab-alerts/compare/v0.28.0...v0.29.0) (2026-11-22)
+
+
+### Features
+
+* **alerts:** alert when Mac memory use stays above threshold ([#83](https://github.com/dryvist/splunk-homelab-alerts/issues/83)) ([3333138](https://github.com/dryvist/splunk-homelab-alerts/commit/3333138792e9787b5e8f9cb6f4d0e36773937f60))
+
 ## [0.28.0](https://github.com/dryvist/splunk-homelab-alerts/compare/v0.27.0...v0.28.0) (2026-11-22)
 
 
