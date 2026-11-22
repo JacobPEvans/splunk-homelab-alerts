@@ -45,11 +45,11 @@ class MacMemoryHeadroomAlertTest(unittest.TestCase):
         self.assertIn("dispatch.earliest_time = -5m", body)
         self.assertIn("cron_schedule = */5 * * * *", body)
 
-    def test_detector_ships_disabled_until_live_validation(self):
+    def test_detector_is_promoted(self):
         body = stanza(self.saved, STANZA)
 
-        self.assertIn("\ndisabled = 1\n", body)
-        self.assertNotIn("\ndisabled = 0\n", body)
+        self.assertIn("\ndisabled = 0\n", body)
+        self.assertNotIn("\ndisabled = 1\n", body)
 
     def test_threshold_macro_is_defined_once_at_ninety_percent(self):
         matches = re.findall(
