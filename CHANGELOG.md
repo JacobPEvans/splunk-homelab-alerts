@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.28.0](https://github.com/dryvist/splunk-homelab-alerts/compare/v0.27.0...v0.28.0) (2026-11-22)
+
+
+### Features
+
+* **alerts:** alert when agent delegation routing fails ([#81](https://github.com/dryvist/splunk-homelab-alerts/issues/81)) ([76f36bb](https://github.com/dryvist/splunk-homelab-alerts/commit/76f36bbc41864a22b38155e76f1d8e275e856c4a))
+
 ## [0.27.0](https://github.com/dryvist/splunk-homelab-alerts/compare/v0.26.0...v0.27.0) (2026-11-21)
 
 
