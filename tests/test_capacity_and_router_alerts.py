@@ -45,6 +45,17 @@ class CapacityAndRouterAlertsTest(unittest.TestCase):
         self.assertNotIn("lower(_raw)", body)
         self.assertNotIn("match(", body)
 
+    def test_delegation_route_alert_fires_on_a_stop_or_a_failing_executor(self):
+        body = stanza(self.saved, "HomelabAlert - agent delegation route failing")
+
+        self.assertIn('index=ai_usage sourcetype="otel:log" "ai_delegation.route"', body)
+        self.assertIn("spath input=route output=failed path=fell_through_from{}", body)
+        self.assertIn('where rung="stopped" OR (attempts>=4 AND fail_pct>50)', body)
+        self.assertIn("dispatch.earliest_time = -70m@m", body)
+        self.assertIn("cron_schedule = 17 * * * *", body)
+        self.assertIn("disabled = 0", body)
+        self.assertIn("alert.suppress.fields = rung", body)
+
     def test_arc_pressure_uses_its_shared_threshold_macro(self):
         body = stanza(self.saved, "HomelabAlert - ZFS ARC pressure")
 
