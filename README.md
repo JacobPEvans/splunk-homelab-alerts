@@ -95,6 +95,9 @@ key in the stanza; the stanza wins.
 - `HomelabAlert - local agent canary failed`: reports canary errors.
 - `HomelabAlert - local agent silent`: reports more than 26 hours without an
   event.
+- `HomelabAlert - agent delegation route failing`: reports, hourly, a delegated
+  task that stopped with no executor, or an executor that failed more than half
+  of at least four attempts.
 
 Detectors live in `ansible-splunk`'s `homelab_alerts` app today. They migrate
 here one at a time. The app default disables searches; a detector stanza
